@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Universidad Exponencial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul-oscuro: #1a237e;
+      --azul-claro: #3949ab;
+      --amarillo: #ffd600;
+      --gris-fondo: #f5f6fa;
+      --blanco: #fff;
+      --sombra: 0 6px 24px rgba(30, 41, 59, 0.12);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--gris-fondo);
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-claro));
+      color: var(--amarillo);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      box-shadow: var(--sombra);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      user-select: none;
+    }
+    .logo-box {
+      background: var(--amarillo);
+      color: var(--azul-oscuro);
+      font-weight: 900;
+      font-size: 1.7rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-family: 'Montserrat', Arial Black, Arial, sans-serif;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .logo-box sup {
+      position: absolute;
+      top: 4px;
+      right: 6px;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    nav {
+      display: flex;
+      gap: 2.5rem;
+      font-weight: 600;
+    }
+    nav a {
+      color: var(--amarillo);
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--blanco);
+      text-decoration: underline;
+    }
+    .menu-btn {
+      display: none;
+    }
+
+    /* Banner principal */
+    .banner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3.5rem 2rem 2rem;
+      background: url('https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: var(--blanco);
+      min-height: 340px;
+      box-shadow: var(--sombra);
+      border-radius: 0 0 32px 32px;
+      margin-bottom: 2.5rem;
+    }
+    .banner-text {
+      max-width: 600px;
+      background: rgba(26,35,126,0.7);
+      padding: 2rem 2.5rem;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(30,41,59,0.18);
+    }
+    .banner-text h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.3);
+    }
+    .banner-text p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      background: rgba(255,255,255,0.12);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .btn-inscribir {
+      background: var(--amarillo);
+      color: var(--azul-oscuro);
+      font-weight: 700;
+      padding: 1rem 2.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 16px rgba(255,214,0,0.18);
+      transition: background 0.3s;
+    }
+    .btn-inscribir:hover {
+      background: var(--blanco);
+      color: var(--azul-claro);
+    }
+
+    /* Programas */
+    .programas {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .programas h2 {
+      font-size: 2.1rem;
+      margin-bottom: 2.2rem;
+      font-weight: 700;
+      color: var(--azul-oscuro);
+      letter-spacing: 1px;
+    }
+    .programas-list {
+      display: flex;
+      justify-content: center;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+    }
+    .programa-item {
+      background: var(--blanco);
+      border-radius: 16px;
+      box-shadow: var(--sombra);
+      max-width: 300px;
+      width: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 2px solid transparent;
+    }
+    .programa-item:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(30,41,59,0.18);
+      border-color: var(--amarillo);
+    }
+    .programa-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+      transition: filter 0.3s;
+    }
+    .programa-item:hover .programa-img {
+      filter: brightness(0.95) saturate(1.2);
+    }
+    .programa-title {
+      padding: 1.2rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--azul-claro);
+      background: linear-gradient(90deg, #f5f6fa 60%, #ffd60022 100%);
+    }
+    .arrow-down {
+      margin-top: 1.5rem;
+      font-size: 2.2rem;
+      color: var(--azul-claro);
+      cursor: pointer;
+      animation: bounce 1.2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(12px);}
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-claro));
+      color: var(--blanco);
+      padding: 2.5rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+      font-size: 1rem;
+      border-radius: 32px 32px 0 0;
+      margin-top: 2rem;
+    }
+    footer .footer-col {
+      max-width: 320px;
+      width: 100%;
+    }
+    footer h4 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-decoration: underline;
+      color: var(--amarillo);
+      letter-spacing: 1px;
+    }
+    footer a {
+      color: var(--amarillo);
+      transition: color 0.2s;
+    }
+    footer a:hover {
+      color: var(--blanco);
+      text-decoration: underline;
+    }
+    footer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    footer ul li {
+      margin-bottom: 0.7rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .banner {
+        flex-direction: column;
+        text-align: center;
+        min-height: 260px;
+      }
+      .banner-text {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+      .programas-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      footer {
+        gap: 2rem;
+      }
+    }
+    @media (max-width: 480px) {
+      header {
+        padding: 1rem 0.7rem;
+        font-size: 0.95rem;
+      }
+      nav {
+        display: none;
+      }
+      .menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+      .menu-btn div {
+        width: 28px;
+        height: 4px;
+        background: var(--amarillo);
+        border-radius: 3px;
+      }
+      .banner-text h1 {
+        font-size: 1.5rem;
+      }
+      .programa-item {
+        max-width: 100%;
+      }
+      footer {
+        font-size: 0.9rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header con logo y menú -->
+<header>
+  <div class="logo" aria-label="Logo Universidad Exponencial">
+    <span style="font-size:2.2rem; font-weight:900; color:var(--amarillo); font-family:'Montserrat',Arial,sans-serif;">
+      U<sup style="font-size:1.1rem; vertical-align:super; color:var(--blanco); font-weight:700;">e</sup>
+    </span>
+    <span style="margin-left:0.7rem;">UNIVERSIDAD EXPONENCIAL</span>
+  </div>
+  <nav role="navigation" aria-label="Menú principal">
+    <a href="#programas">Programas Académicos</a>
+    <a href="#admisiones">Admisiones</a>
+  </nav>
+  <div class="menu-btn" aria-label="Menú móvil" tabindex="0">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
+
+<!-- Banner principal -->
+<section class="banner" role="banner">
+  <div class="banner-text">
+    <h1>Una educación que transforma vidas</h1>
+    <p>Descubre tu potencial con nosotros</p>
+    <button class="btn-inscribir" aria-label="Inscribirse ahora">Inscribirse ahora</button>
+  </div>
+  <div aria-hidden="true" style="flex:1;"></div>
+</section>
+
+<!-- Sección de programas académicos -->
+<section id="programas" class="programas" aria-labelledby="programas-title">
+  <h2 id="programas-title">Programas universitarios</h2>
+  <div class="programas-list">
+    <article class="programa-item" tabindex="0" onclick="mostrarInfo('ingenieria')">
+      <img src="imagenes/ingsis.jpeg" alt="Ingeniería de Sistemas" class="programa-img" />
+      <h3 class="programa-title">Ingeniería de Sistemas</h3>
+    </article>
+    <article class="programa-item" tabindex="0" onclick="mostrarInfo('derecho')">
+      <img src="imagenes/derecho penal.jpeg" alt="Libro de leyes y mazo judicial" class="programa-img" />
+      <div class="programa-title">Derecho</div>
+      <div class="programa-info" id="info-derecho" style="display:none; padding:1rem; color:#222; background:#f9f9f9;">
+        <strong>Derecho:</strong> Formación integral en leyes, ética y justicia. Prácticas en tribunales y asesoría legal.
+      </div>
+    </article>
+    <article class="programa-item" tabindex="0" onclick="mostrarInfo('sociales')">
+      <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80" alt="Grupo de estudiantes conversando" class="programa-img" />
+      <div class="programa-title">Ciencias Sociales</div>
+      <div class="programa-info" id="info-sociales" style="display:none; padding:1rem; color:#222; background:#f9f9f9;">
+        <strong>Ciencias Sociales:</strong> Psicología, Sociología, Trabajo Social y más. Enfoque en investigación y acción comunitaria.
+      </div>
+    </article>
+  </div>
+  <div class="arrow-down" aria-hidden="true">⬇️</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-col">
+    <h4>Contacto</h4>
+    <ul>
+      <li>Email: contacto@universidadexponencial.com</li>
+      <li>Teléfono: +56 123 456 789</li>
+      <li>Dirección: Av. Siempre Viva 742</li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Redes sociales</h4>
+    <ul>
+      <li><a href="#" aria-label="Facebook Universidad Exponencial">Facebook</a></li>
+      <li><a href="#" aria-label="Twitter Universidad Exponencial">Twitter</a></li>
+      <li><a href="#" aria-label="Instagram Universidad Exponencial">Instagram</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Legal</h4>
+    <ul>
+      <li><a href="#" aria-label="Aviso legal">Aviso legal</a></li>
+      <li><a href="#" aria-label="Política de privacidad">Política de privacidad</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  function mostrarInfo(area) {
+    // Oculta todas las descripciones
+    document.querySelectorAll('.programa-info').forEach(function(div) {
+      div.style.display = 'none';
+    });
+    // Muestra solo la seleccionada
+    document.getElementById('info-' + area).style.display = 'block';
+  }
+</script>
+</body>
+</html>
