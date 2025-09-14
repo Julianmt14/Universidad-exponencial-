@@ -1,0 +1,285 @@
+<!-- =============================================
+   INICIO DEL DOCUMENTO HTML
+   ============================================= -->
+<!DOCTYPE html> <!-- Declara el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Idioma principal del contenido: Español -->
+<head> <!-- Cabecera del documento -->
+  <!-- =============================================
+       METADATOS DEL DOCUMENTO
+       ============================================= -->
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres UTF-8 para soportar caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Escala responsiva para dispositivos móviles -->
+  <meta name="description" content="Universidad Exponencial - Formación superior innovadora." /> <!-- Breve descripción para motores de búsqueda -->
+  <meta name="theme-color" content="#1a237e" /> <!-- Color del navegador en dispositivos móviles -->
+  <title>Universidad Exponencial</title> <!-- Título que aparece en la pestaña del navegador -->
+  <!-- =============================================
+       FUENTES Y ESTILOS
+       ============================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Optimización de carga de fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Conexión a dominio de fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" /> <!-- Fuentes utilizadas en el diseño -->
+  <link rel="icon" href="imagenes/icono.jpg" type="image/jpeg" /> <!-- Icono que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="estilos/main.css" /> <!-- Hoja de estilos principal -->
+</head> <!-- Fin cabecera -->
+<body data-theme="light"> <!-- Cuerpo del documento con atributo de tema -->
+  <!-- =============================================
+       ENLACE DE ACCESIBILIDAD
+       ============================================= -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a> <!-- Enlace accesible para saltar directamente al contenido principal -->
+
+  <!-- =============================================
+       ENCABEZADO PRINCIPAL
+       ============================================= -->
+  <header class="site-header" role="banner"> <!-- Encabezado principal del sitio -->
+    <div class="brand" aria-label="Identidad de marca"> <!-- Contenedor de la identidad visual de la universidad -->
+      <span class="brand-mark">U<sup>e</sup></span> <!-- Marca visual con superíndice -->
+      <span class="brand-name">Universidad Exponencial</span> <!-- Nombre completo de la universidad -->
+    </div> <!-- Fin brand -->
+    <nav class="main-nav" aria-label="Menú principal"> <!-- Navegación principal del sitio -->
+      <ul class="nav-list"> <!-- Lista de enlaces de navegación -->
+        <li><a href="#programas">Programas</a></li> <!-- Enlace a la sección de programas -->
+        <li><a href="#admisiones">Admisiones</a></li> <!-- Enlace a la sección de admisiones -->
+        <li><a href="#contacto">Contacto</a></li> <!-- Enlace a la sección de contacto -->
+      </ul> <!-- Fin lista navegación -->
+    </nav> <!-- Fin nav -->
+    <div class="header-actions"> <!-- Acciones adicionales en el encabezado -->
+      <button id="themeToggle" class="btn-icon" aria-label="Cambiar tema">🌙</button> <!-- Botón para alternar entre temas claro y oscuro -->
+      <button class="btn-primario btn-inscribir" aria-label="Abrir inscripción">Inscribirse</button> <!-- Botón de llamada a la acción para inscribirse -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuMovil"> <!-- Botón para abrir el menú móvil -->
+        <span class="menu-line"></span> <!-- Línea del ícono de menú hamburguesa -->
+        <span class="menu-line"></span> <!-- Línea del ícono de menú hamburguesa -->
+        <span class="menu-line"></span> <!-- Línea del ícono de menú hamburguesa -->
+      </button> <!-- Fin botón menú -->
+    </div> <!-- Fin acciones -->
+    <div id="menuMovil" class="mobile-drawer" aria-hidden="true"> <!-- Cajón móvil para navegación en dispositivos pequeños -->
+      <nav aria-label="Menú móvil"> <!-- Navegación móvil -->
+        <ul> <!-- Lista de enlaces del menú móvil -->
+          <li><a href="#programas" class="drawer-link">Programas</a></li> <!-- Enlace a programas -->
+          <li><a href="#admisiones" class="drawer-link">Admisiones</a></li> <!-- Enlace a admisiones -->
+          <li><a href="#contacto" class="drawer-link">Contacto</a></li> <!-- Enlace a contacto -->
+        </ul> <!-- Fin lista móvil -->
+      </nav> <!-- Fin nav móvil -->
+    </div> <!-- Fin cajón móvil -->
+  </header> <!-- Fin header -->
+
+  <!-- =============================================
+       SECCIÓN HERO
+       ============================================= -->
+  <section class="hero" aria-label="Sección principal"> <!-- Sección hero -->
+    <div class="hero-media" aria-hidden="true"></div> <!-- Capa decorativa -->
+    <div class="hero-content"> <!-- Contenido hero -->
+      <h1 class="hero-title">Aprende. Innova. Impacta.</h1> <!-- Título hero -->
+      <p class="hero-subtitle">Formación interdisciplinaria con visión global.</p> <!-- Subtítulo hero -->
+      <div class="hero-actions"> <!-- Acciones hero -->
+        <button class="btn-primario btn-inscribir" aria-label="Abrir inscripción">Inscribirme</button> <!-- Botón principal -->
+        <a href="#programas" class="btn-secundario">Ver Programas</a> <!-- Botón secundario -->
+      </div> <!-- Fin acciones hero -->
+      <ul class="hero-metrics" aria-label="Métricas destacadas"> <!-- Métricas -->
+        <li><span>+40</span> Docentes expertos</li> <!-- Métrica 1 -->
+        <li><span>9</span> Facultades</li> <!-- Métrica 2 -->
+        <li><span>100%</span> Enfoque práctico</li> <!-- Métrica 3 -->
+      </ul> <!-- Fin métricas -->
+    </div> <!-- Fin contenido hero -->
+  </section> <!-- Fin hero -->
+
+  <!-- =============================================
+       CONTENIDO PRINCIPAL
+       ============================================= -->
+  <main id="contenido"> <!-- Contenido principal -->
+    <!-- =============================================
+         SECCIÓN PROGRAMAS
+         ============================================= -->
+    <section id="programas" class="programas" aria-labelledby="programas-title"> <!-- Sección programas -->
+      <header class="section-head"> <!-- Encabezado sección -->
+        <h2 id="programas-title" class="section-title">Programas universitarios</h2> <!-- Título sección -->
+        <p class="section-desc">Explora nuestras áreas académicas.</p> <!-- Descripción -->
+      </header> <!-- Fin header sección -->
+      <div class="programas-list" role="list" aria-label="Lista de programas"> <!-- Grid programas -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="ingenieria" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="imagenes/ingsis.jpeg" alt="Ingeniería de Sistemas" class="programa-img" loading="lazy" /> <!-- Imagen -->
+            <h3 class="programa-title">Ingeniería de Sistemas</h3> <!-- Título programa -->
+            <p class="programa-resumen">Software, IA y arquitectura cloud.</p> <!-- Resumen -->
+            <button class="programa-toggle btn-ver-mas" aria-controls="info-ingenieria">Ver más</button> <!-- Botón -->
+            <div class="programa-info" id="info-ingenieria" hidden> <!-- Panel oculto -->
+              <p><strong>Perfil:</strong> Desarrollo, datos, automatización.</p> <!-- Texto -->
+              <p><strong>Salidas:</strong> DevOps, Data, Cloud.</p> <!-- Texto -->
+            </div> <!-- Fin panel -->
+            
+        </article> <!-- Fin tarjeta -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="derecho" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="imagenes/derecho penal.jpeg" alt="Derecho" class="programa-img" loading="lazy" /> <!-- Imagen -->
+          <h3 class="programa-title">Derecho</h3> <!-- Título -->
+          <p class="programa-resumen">Justicia, ética y litigio.</p> <!-- Resumen -->
+          <button class="programa-toggle btn-ver-mas" aria-controls="info-derecho">Ver más</button> <!-- Botón -->
+          <div class="programa-info" id="info-derecho" hidden> <!-- Panel -->
+            <p><strong>Áreas:</strong> Penal, civil, constitucional.</p> <!-- Texto -->
+            <p><strong>Proyección:</strong> Abogacía, magistratura.</p> <!-- Texto -->
+          </div> <!-- Fin panel -->
+          
+        </article> <!-- Fin tarjeta -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="sociales" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="imagenes/sociales.jpg" alt="Ciencias Sociales" class="programa-img" loading="lazy" /> <!-- Imagen -->
+          <h3 class="programa-title">Ciencias Sociales</h3> <!-- Título -->
+          <p class="programa-resumen">Psicología y sociedad.</p> <!-- Resumen -->
+          <button class="programa-toggle btn-ver-mas" aria-controls="info-sociales">Ver más</button> <!-- Botón -->
+          <div class="programa-info" id="info-sociales" hidden> <!-- Panel -->
+            <p><strong>Objetivo:</strong> Transformación social.</p> <!-- Texto -->
+            <p><strong>Ámbitos:</strong> Investigación, intervención.</p> <!-- Texto -->
+          </div> <!-- Fin panel -->
+          
+        </article> <!-- Fin tarjeta -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="medicina" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="imagenes/Medicina.jpg" alt="Medicina" class="programa-img" loading="lazy" /> <!-- Imagen -->
+          <h3 class="programa-title">Medicina</h3> <!-- Título -->
+          <p class="programa-resumen">Ciencia y vocación.</p> <!-- Resumen -->
+          <button class="programa-toggle btn-ver-mas" aria-controls="info-medicina">Ver más</button> <!-- Botón -->
+          <div class="programa-info" id="info-medicina" hidden> <!-- Panel -->
+            <p><strong>Prácticas:</strong> Clínicas y simulación.</p> <!-- Texto -->
+            <p><strong>Áreas:</strong> General y especialidades.</p> <!-- Texto -->
+          </div> <!-- Fin panel -->
+          
+        </article> <!-- Fin tarjeta -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="arquitectura" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="imagenes/arqui.jpg" alt="Arquitectura" class="programa-img" loading="lazy" /> <!-- Imagen -->
+          <h3 class="programa-title">Arquitectura</h3> <!-- Título -->
+          <p class="programa-resumen">Espacios sostenibles.</p> <!-- Resumen -->
+          <button class="programa-toggle btn-ver-mas" aria-controls="info-arquitectura">Ver más</button> <!-- Botón -->
+          <div class="programa-info" id="info-arquitectura" hidden> <!-- Panel -->
+            <p><strong>Competencias:</strong> Diseño y modelado.</p> <!-- Texto -->
+            <p><strong>Ámbitos:</strong> Urbanismo, interiores.</p> <!-- Texto -->
+          </div> <!-- Fin panel -->
+          
+        </article> <!-- Fin tarjeta -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="administracion" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Administración" class="programa-img" loading="lazy" /> <!-- Imagen -->
+          <h3 class="programa-title">Administración de Empresas</h3> <!-- Título -->
+          <p class="programa-resumen">Liderazgo y estrategia.</p> <!-- Resumen -->
+          <button class="programa-toggle btn-ver-mas" aria-controls="info-administracion">Ver más</button> <!-- Botón -->
+          <div class="programa-info" id="info-administracion" hidden> <!-- Panel -->
+            <p><strong>Énfasis:</strong> Innovación y finanzas.</p> <!-- Texto -->
+            <p><strong>Roles:</strong> Dirección, consultoría.</p> <!-- Texto -->
+          </div> <!-- Fin panel -->
+          
+        </article> <!-- Fin tarjeta -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="civil" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="imagenes/civil.jpg" alt="Ingeniería Civil" class="programa-img" loading="lazy" /> <!-- Imagen -->
+          <h3 class="programa-title">Ingeniería Civil</h3> <!-- Título -->
+            <p class="programa-resumen">Infraestructura clave.</p> <!-- Resumen -->
+            <button class="programa-toggle btn-ver-mas" aria-controls="info-civil">Ver más</button> <!-- Botón -->
+            <div class="programa-info" id="info-civil" hidden> <!-- Panel -->
+              <p><strong>Áreas:</strong> Vías y estructuras.</p> <!-- Texto -->
+              <p><strong>Impacto:</strong> Desarrollo sostenible.</p> <!-- Texto -->
+            </div> <!-- Fin panel -->
+            
+        </article> <!-- Fin tarjeta -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="educacion" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="imagenes/educacion.jpg" alt="Educación" class="programa-img" loading="lazy" /> <!-- Imagen -->
+          <h3 class="programa-title">Educación</h3> <!-- Título -->
+          <p class="programa-resumen">Pedagogía innovadora.</p> <!-- Resumen -->
+          <button class="programa-toggle btn-ver-mas" aria-controls="info-educacion">Ver más</button> <!-- Botón -->
+          <div class="programa-info" id="info-educacion" hidden> <!-- Panel -->
+            <p><strong>Metodologías:</strong> Activo e inclusivo.</p> <!-- Texto -->
+            <p><strong>Oportunidades:</strong> Docencia y gestión.</p> <!-- Texto -->
+          </div> <!-- Fin panel -->
+          
+        </article> <!-- Fin tarjeta -->
+        <article class="programa-item" role="listitem" tabindex="0" data-programa="contaduria" aria-expanded="false"> <!-- Tarjeta -->
+          <img src="imagenes/contaduria.jpg" alt="Contaduría" class="programa-img" loading="lazy" /> <!-- Imagen -->
+          <h3 class="programa-title">Contaduría Pública</h3> <!-- Título -->
+          <p class="programa-resumen">Finanzas y auditoría.</p> <!-- Resumen -->
+          <button class="programa-toggle btn-ver-mas" aria-controls="info-contaduria">Ver más</button> <!-- Botón -->
+          <div class="programa-info" id="info-contaduria" hidden> <!-- Panel -->
+            <p><strong>Competencias:</strong> NIIF y análisis.</p> <!-- Texto -->
+            <p><strong>Ámbitos:</strong> Auditoría, fiscal.</p> <!-- Texto -->
+          </div> <!-- Fin panel -->
+          
+        </article> <!-- Fin tarjeta -->
+      </div> <!-- Fin grid -->
+      <div class="arrow-down" aria-hidden="true">⬇️</div> <!-- Flecha -->
+    </section> <!-- Fin programas -->
+
+    <!-- =============================================
+         SECCIÓN ADMISIÓN
+         ============================================= -->
+    <section id="admisiones" class="admisiones" aria-labelledby="admisiones-title"> <!-- Sección admisiones -->
+      <header class="section-head"> <!-- Header sección -->
+        <h2 id="admisiones-title" class="section-title">Proceso de admisiones</h2> <!-- Título admisiones -->
+        <p class="section-desc">Postula en 4 pasos simples.</p> <!-- Descripción -->
+      </header> <!-- Fin header -->
+      <ol class="pasos" aria-label="Pasos"> <!-- Lista ordenada -->
+        <li><strong>Registro:</strong> Crea tu perfil.</li> <!-- Paso 1 -->
+        <li><strong>Documentos:</strong> Sube certificados.</li> <!-- Paso 2 -->
+        <li><strong>Evaluación:</strong> Entrevista + prueba.</li> <!-- Paso 3 -->
+        <li><strong>Resultado:</strong> Carta y becas.</li> <!-- Paso 4 -->
+      </ol> <!-- Fin lista -->
+      <div class="admisiones-cta"> <!-- CTA adicional -->
+        <button class="btn-primario btn-inscribir" aria-label="Abrir inscripción">Quiero inscribirme</button> <!-- Botón -->
+      </div> <!-- Fin CTA -->
+    </section> <!-- Fin admisiones -->
+  </main> <!-- Fin main -->
+
+  <!-- =============================================
+       PIE DE PÁGINA
+       ============================================= -->
+  <footer class="site-footer" id="contacto" role="contentinfo"> <!-- Footer -->
+    <div class="footer-grid"> <!-- Grid footer -->
+      <div class="footer-col"> <!-- Columna contacto -->
+        <h4>Contacto</h4> <!-- Título -->
+        <ul class="footer-list"> <!-- Lista -->
+          <li><strong>Email:</strong> <a href="mailto:contacto@universidadexponencial.com">contacto@universidadexponencial.com</a></li> <!-- Email -->
+          <li><strong>Tel:</strong> +56 123 456 789</li> <!-- Teléfono -->
+          <li><strong>Dirección:</strong> Av. Siempre Viva 742</li> <!-- Dirección -->
+        </ul> <!-- Fin lista -->
+      </div> <!-- Fin col -->
+      <div class="footer-col"> <!-- Columna redes -->
+        <h4>Redes</h4> <!-- Título -->
+        <ul class="footer-list"> <!-- Lista -->
+          <li><a href="#">Facebook</a></li> <!-- Link -->
+          <li><a href="#">Instagram</a></li> <!-- Link -->
+          <li><a href="#">LinkedIn</a></li> <!-- Link -->
+        </ul> <!-- Fin lista -->
+      </div> <!-- Fin col -->
+      <div class="footer-col"> <!-- Columna legal -->
+        <h4>Legal</h4> <!-- Título -->
+        <ul class="footer-list"> <!-- Lista -->
+          <li><a href="#">Aviso legal</a></li> <!-- Link -->
+          <li><a href="#">Privacidad</a></li> <!-- Link -->
+          <li><a href="#">Términos</a></li> <!-- Link -->
+        </ul> <!-- Fin lista -->
+      </div> <!-- Fin col -->
+      <div class="footer-col"> <!-- Columna boletín -->
+        <h4>Boletín</h4> <!-- Título -->
+        <form class="mini-news" id="miniNews" aria-label="Boletín"> <!-- Formulario -->
+          <label for="miniEmail" class="sr-only">Correo</label> <!-- Etiqueta oculta -->
+          <input id="miniEmail" type="email" placeholder="Tu correo" required /> <!-- Campo email -->
+          <button type="submit" class="btn-secundario">Suscribirme</button> <!-- Botón -->
+          <p class="mini-msg" aria-live="polite"></p> <!-- Mensaje dinámico -->
+        </form> <!-- Fin form -->
+      </div> <!-- Fin col -->
+    </div> <!-- Fin grid -->
+    <div class="footer-base"> <!-- Base footer -->
+      <p>&copy; <span id="anio"></span> Universidad Exponencial. Todos los derechos reservados.</p> <!-- Copyright -->
+    </div> <!-- Fin base -->
+  </footer> <!-- Fin footer -->
+
+  <!-- =============================================
+       MODAL INSCRIPCIÓN
+       ============================================= -->
+  <div id="modal-inscribir" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"> <!-- Modal inscripción -->
+    <div class="modal-dialog"> <!-- Caja modal -->
+      <button class="modal-close" aria-label="Cerrar" data-close>×</button> <!-- Botón cerrar -->
+      <h2 id="modalTitle">Inscríbete ahora</h2> <!-- Título modal -->
+      <p>Ingresa tu correo y te enviaremos información.</p> <!-- Texto -->
+      <form id="form-inscribir" class="form-inscribir" novalidate> <!-- Form modal -->
+        <label for="correo" class="form-label">Correo electrónico</label> <!-- Etiqueta -->
+        <input type="email" id="correo" required placeholder="tucorreo@ejemplo.com" autocomplete="email" /> <!-- Input -->
+        <button type="submit" class="btn-primario ancho">Enviar</button> <!-- Botón enviar -->
+      </form> <!-- Fin form -->
+      <div id="mensaje-confirmacion" class="confirmacion" hidden></div> <!-- Mensaje -->
+    </div> <!-- Fin dialog -->
+  </div> <!-- Fin modal -->
+
+  <!-- SCRIPT PRINCIPAL MOVILIZADO A funciones.js -->
+  <script src="funciones.js" defer></script>
+</body> <!-- Fin body -->
+</html> <!-- Fin HTML -->
