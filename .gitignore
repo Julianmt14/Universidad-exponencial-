@@ -1,0 +1,50 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Archivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Archivos de build
+dist/
+build/
+*.min.js
+*.min.css
+
+# Base de datos
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logs
+*.log
+logs/
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos temporales
+*.tmp
+*.temp
+.cache/
