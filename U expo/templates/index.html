@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- SECCIÓN HERO -->
+  <section class="hero" aria-label="Sección principal">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Aprende. Innova. Impacta.</h1>
+      <p class="hero-subtitle">Formación interdisciplinaria con visión global.</p>
+      <div class="hero-actions">
+        <button class="btn-primario btn-inscribir" aria-label="Abrir inscripción">Inscribirme</button>
+        <a href="#programas" class="btn-secundario">Ver Programas</a>
+      </div>
+      <ul class="hero-metrics" aria-label="Métricas destacadas">
+        <li><span>+40</span> Docentes expertos</li>
+        <li><span>9</span> Facultades</li>
+        <li><span>100%</span> Enfoque práctico</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PROGRAMAS -->
+  <section id="programas" class="programas" aria-labelledby="programas-title">
+    <header class="section-head">
+      <h2 id="programas-title" class="section-title">Programas universitarios</h2>
+      <p class="section-desc">Explora nuestras áreas académicas.</p>
+    </header>
+
+    <div class="programas-list" role="list" aria-label="Lista de programas">
+      <!-- Ingeniería de Sistemas -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="ingenieria" aria-expanded="false">
+        <img src="{{ url_for('static', filename='imagenes/ingsis.jpeg') }}" alt="Ingeniería de Sistemas" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Ingeniería de Sistemas</h3>
+        <p class="programa-resumen">Software, IA y arquitectura cloud.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-ingenieria">Ver más</button>
+        <div class="programa-info" id="info-ingenieria" hidden></div>
+      </article>
+
+      <!-- Derecho -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="derecho" aria-expanded="false">
+        <img src="{{ url_for('static', filename='imagenes/derecho penal.jpeg') }}" alt="Derecho" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Derecho</h3>
+        <p class="programa-resumen">Justicia, ética y litigio.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-derecho">Ver más</button>
+        <div class="programa-info" id="info-derecho" hidden></div>
+      </article>
+
+      <!-- Ciencias Sociales -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="sociales" aria-expanded="false">
+        <img src="{{ url_for('static', filename='imagenes/sociales.jpg') }}" alt="Ciencias Sociales" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Ciencias Sociales</h3>
+        <p class="programa-resumen">Psicología y sociedad.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-sociales">Ver más</button>
+        <div class="programa-info" id="info-sociales" hidden></div>
+      </article>
+
+      <!-- Medicina -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="medicina" aria-expanded="false">
+        <img src="{{ url_for('static', filename='imagenes/Medicina.jpg') }}" alt="Medicina" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Medicina</h3>
+        <p class="programa-resumen">Ciencia y vocación.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-medicina">Ver más</button>
+        <div class="programa-info" id="info-medicina" hidden></div>
+      </article>
+
+      <!-- Arquitectura -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="arquitectura" aria-expanded="false">
+        <img src="{{ url_for('static', filename='imagenes/arqui.jpg') }}" alt="Arquitectura" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Arquitectura</h3>
+        <p class="programa-resumen">Espacios sostenibles.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-arquitectura">Ver más</button>
+        <div class="programa-info" id="info-arquitectura" hidden></div>
+      </article>
+
+      <!-- Administración de Empresas -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="administracion" aria-expanded="false">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Administración" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Administración de Empresas</h3>
+        <p class="programa-resumen">Liderazgo y estrategia.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-administracion">Ver más</button>
+        <div class="programa-info" id="info-administracion" hidden></div>
+      </article>
+
+      <!-- Ingeniería Civil -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="civil" aria-expanded="false">
+        <img src="{{ url_for('static', filename='imagenes/civil.jpg') }}" alt="Ingeniería Civil" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Ingeniería Civil</h3>
+        <p class="programa-resumen">Infraestructura clave.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-civil">Ver más</button>
+        <div class="programa-info" id="info-civil" hidden></div>
+      </article>
+
+      <!-- Educación -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="educacion" aria-expanded="false">
+        <img src="{{ url_for('static', filename='imagenes/educacion.jpg') }}" alt="Educación" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Educación</h3>
+        <p class="programa-resumen">Pedagogía innovadora.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-educacion">Ver más</button>
+        <div class="programa-info" id="info-educacion" hidden></div>
+      </article>
+
+      <!-- Contaduría Pública -->
+      <article class="programa-item" role="listitem" tabindex="0" data-programa="contaduria" aria-expanded="false">
+        <img src="{{ url_for('static', filename='imagenes/contaduria.jpg') }}" alt="Contaduría" class="programa-img" loading="lazy" />
+        <h3 class="programa-title">Contaduría Pública</h3>
+        <p class="programa-resumen">Finanzas y auditoría.</p>
+        <button class="programa-toggle btn-ver-mas" aria-controls="info-contaduria">Ver más</button>
+        <div class="programa-info" id="info-contaduria" hidden></div>
+      </article>
+    </div>
+
+    <div class="arrow-down" aria-hidden="true">⬇️</div>
+  </section>
+
+  <!-- SECCIÓN ADMISIONES -->
+  <section id="admisiones" class="admisiones" aria-labelledby="admisiones-title">
+    <header class="section-head">
+      <h2 id="admisiones-title" class="section-title">Proceso de admisiones</h2>
+      <p class="section-desc">Postula en 4 pasos simples.</p>
+    </header>
+    <ol class="pasos" aria-label="Pasos">
+      <li><strong>Registro:</strong> Crea tu perfil.</li>
+      <li><strong>Documentos:</strong> Sube certificados.</li>
+      <li><strong>Evaluación:</strong> Entrevista + prueba.</li>
+      <li><strong>Resultado:</strong> Carta y becas.</li>
+    </ol>
+    <div class="admisiones-cta">
+      <button class="btn-primario btn-inscribir" aria-label="Abrir inscripción">Quiero inscribirme</button>
+    </div>
+  </section>
+{% endblock %}

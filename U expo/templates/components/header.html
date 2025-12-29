@@ -1,0 +1,44 @@
+<!-- ENCABEZADO PRINCIPAL -->
+<header class="site-header" role="banner">
+  <div class="brand" aria-label="Identidad de marca">
+    <span class="brand-mark">U<sup>e</sup></span>
+    <span class="brand-name">Universidad Exponencial</span>
+  </div>
+
+  <!-- Navegación principal (desktop) -->
+  <nav class="main-nav" aria-label="Menú principal">
+    <ul class="nav-list">
+      <li><a href="#programas">Programas</a></li>
+      <li><a href="#admisiones">Admisiones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Acciones -->
+  <div class="header-actions">
+    <button id="themeToggle" class="btn-icon" aria-label="Cambiar tema">🌙</button>
+    <button class="btn-primario btn-inscribir" aria-label="Abrir inscripción">Inscribirse</button>
+    
+    <!-- Botón menú hamburguesa (mobile) -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuMovil">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+  </div>
+
+  <!-- Menú móvil (drawer) -->
+  <div id="menuMovil" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <h2>Menú</h2>
+      <button class="mobile-drawer-close" aria-label="Cerrar menú">×</button>
+    </div>
+    <nav aria-label="Menú móvil">
+      <ul>
+        <li><a href="#programas" class="drawer-link">Programas</a></li>
+        <li><a href="#admisiones" class="drawer-link">Admisiones</a></li>
+        <li><a href="#contacto" class="drawer-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

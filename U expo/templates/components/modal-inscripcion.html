@@ -1,0 +1,39 @@
+<!-- MODAL INSCRIPCIÓN -->
+<div id="modal-inscribir" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-dialog">
+    <button class="modal-close" aria-label="Cerrar" data-close">×</button>
+    <h2 id="modalTitle">Inscríbete ahora</h2>
+    <p>Ingresa tus datos y te enviaremos información.</p>
+
+    <form id="form-inscribir" class="form-inscribir" novalidate>
+      <label for="nombre" class="form-label">Nombre completo</label>
+      <input type="text" id="nombre" required placeholder="Tu nombre" autocomplete="name" />
+
+      <label for="edad" class="form-label">Edad</label>
+      <input type="number" id="edad" required min="15" max="99" placeholder="Tu edad" autocomplete="bday" />
+
+      <label for="telefono" class="form-label">Teléfono</label>
+      <input type="tel" id="telefono" required pattern="[0-9\-\+\s]{7,15}" placeholder="Tu teléfono" autocomplete="tel" />
+
+      <label for="programa" class="form-label">Programa de interés</label>
+      <select id="programa" required>
+        <option value="">Selecciona un programa</option>
+        <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+        <option value="Derecho">Derecho</option>
+        <option value="Ciencias Sociales">Ciencias Sociales</option>
+        <option value="Medicina">Medicina</option>
+        <option value="Arquitectura">Arquitectura</option>
+        <option value="Administración de Empresas">Administración de Empresas</option>
+        <option value="Ingeniería Civil">Ingeniería Civil</option>
+        <option value="Educación">Educación</option>
+        <option value="Contaduría Pública">Contaduría Pública</option>
+      </select>
+
+      <label for="correo" class="form-label">Correo electrónico</label>
+      <input type="email" id="correo" required placeholder="tucorreo@ejemplo.com" autocomplete="email" />
+      <button type="submit" class="btn-primario ancho">Enviar</button>
+    </form>
+
+    <div id="mensaje-confirmacion" class="confirmacion" role="status" aria-live="polite" hidden></div>
+  </div>
+</div>

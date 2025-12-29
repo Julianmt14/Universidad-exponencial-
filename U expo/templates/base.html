@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Universidad Exponencial - Formación superior innovadora." />
+  <meta name="theme-color" content="#1a237e" />
+  <title>{% block title %}Universidad Exponencial{% endblock %}</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="{{ url_for('static', filename='imagenes/icono.jpg') }}" type="image/jpeg" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilos/main.css') }}" />
+</head>
+
+<body data-theme="light">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- HEADER -->
+  {% include 'components/header.html' %}
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="contenido">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- FOOTER -->
+  {% include 'components/footer.html' %}
+
+  <!-- MODAL INSCRIPCIÓN -->
+  {% include 'components/modal-inscripcion.html' %}
+
+  <!-- CHAT AYUDA -->
+  {% include 'components/chat-ayuda.html' %}
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = 'https://edxxalzdoldrywtkqywz.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVkeHhhbHpkb2xkcnl3dGtxeXd6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI1MzgzNDksImV4cCI6MjA3ODExNDM0OX0.HfQNXNalLBUEehcMUyKnz8tlhNBJtVripZj2uP7DBE4';
+    (function() {
+      if (typeof supabase !== 'undefined' && supabase.createClient) {
+        window.supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      } else {
+        setTimeout(function() {
+          if (typeof supabase !== 'undefined' && supabase.createClient) {
+            window.supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+          }
+        }, 100);
+      }
+    })();
+  </script>
+  <script src="{{ url_for('static', filename='funciones.js') }}" defer></script>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
