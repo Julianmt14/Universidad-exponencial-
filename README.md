@@ -1,7 +1,9 @@
 # 🎓 Universidad Exponencial
 
-![Universidad Exponencial]
 <img width="1909" height="904" alt="image" src="https://github.com/user-attachments/assets/cf971802-78ff-43a2-8e96-45ca10e398f4" />
+<img width="1895" height="1176" alt="image" src="https://github.com/user-attachments/assets/246dc83e-2e83-4425-8b05-c8a29adcad3d" />
+
+
 
 
 ## 📋 Descripción
