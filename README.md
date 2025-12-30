@@ -1,6 +1,8 @@
 # 🎓 Universidad Exponencial
 
-![Universidad Exponencial](imagenes/banner.png)
+![Universidad Exponencial]
+<img width="1909" height="904" alt="image" src="https://github.com/user-attachments/assets/cf971802-78ff-43a2-8e96-45ca10e398f4" />
+
 
 ## 📋 Descripción
 Universidad Exponencial es un sistema web de gestión universitaria moderno y responsive que permite administrar programas académicos, gestionar admisiones de estudiantes y mantener un registro organizado de la información institucional.
